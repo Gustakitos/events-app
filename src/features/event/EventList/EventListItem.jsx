@@ -6,7 +6,7 @@ class EventListItem extends Component {
   render() {
     const {event} = this.props;
     return (
-      <div>
+      <div style={{marginBottom: "10px"}}>
         <Segment.Group>
           <Segment>
             <Item.Group>
@@ -33,7 +33,7 @@ class EventListItem extends Component {
           </Segment>
           <Segment secondary>
             <List horizontal>
-            {event.attendees.map((attendee) => (
+            {event.attendee && event.attendees.map((attendee) => (
               <EventListAttendee key={attendee.id} attendee={attendee}/>
             ))}
             </List>
